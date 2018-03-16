@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { COLORS } from '../../constants';
 
 // TODO:
 // - raised style
 
 const defaultStyle = {
-    height: '2.25em',
+    height: 36,
     fontSize: '1em',
     padding: '0 16px',
     textTransform: 'uppercase',
@@ -18,15 +19,15 @@ const defaultStyle = {
 };
 
 const onFocusStyle = {
-    backgroundColor: 'rgba(153, 153, 153, 0.2)',
+    backgroundColor: COLORS.BUTTON.FOCUSED,
 };
 
 const onPressedStyle = {
-    backgroundColor: 'rgba(153, 153, 153, 0.4)',
+    backgroundColor: COLORS.BUTTON.PRESSED,
 };
 
 const disabledStyle = {
-    color: 'rgba(0, 0, 0, 0.26)',
+    color: COLORS.BUTTON.DISABLED,
 };
 
 class Button extends Component {
