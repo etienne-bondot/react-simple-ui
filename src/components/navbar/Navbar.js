@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const headerStyle = {
     display: 'flex',
@@ -10,11 +11,8 @@ const headerStyle = {
     top: 0,
     zIndex: 1,
     position: 'fixed',
-    padding: '0 1em',
+    padding: '0 3em',
 };
-
-const Navbar = ({children}) =>
-    <header style={headerStyle}>{children}</header>;
 
 const headerTitle = {
     fontSize: 18,
@@ -22,10 +20,15 @@ const headerTitle = {
     fontWeight: 400,
 };
 
-const NavbarTitle = ({children}) =>
-    <h1 style={headerTitle}>{children}</h1>
+const Navbar = ({title = '',}) =>
+    <header style={headerStyle}>
+        <h1 style={headerTitle}>{title}</h1>
+    </header>;
+
+Navbar.propTypes = {
+    title: PropTypes.string,
+};
 
 export {
     Navbar,
-    NavbarTitle,
 };

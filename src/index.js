@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 /**
  * Font Awesome
@@ -19,5 +20,5 @@ fontawesome.library.add(
     faCoffee
 );
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Router><App/></Router>, document.getElementById('root'));
 registerServiceWorker();
