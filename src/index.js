@@ -6,7 +6,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
  * Font Awesome
  */
 import fontawesome from '@fortawesome/fontawesome';
-import {faCheckSquare, faCoffee} from '@fortawesome/fontawesome-free-solid';
+import {
+    faCheckSquare,
+    faCoffee,
+    faLink
+} from '@fortawesome/fontawesome-free-solid';
 
 import './index.css';
 
@@ -17,7 +21,8 @@ import registerServiceWorker from './registerServiceWorker';
 // This setup is done once adding all of the icons to be use in the app's React components.
 fontawesome.library.add(
     faCheckSquare,
-    faCoffee
+    faCoffee,
+    faLink,
 );
 
 ReactDOM.render(<Router><App/></Router>, document.getElementById('root'));
