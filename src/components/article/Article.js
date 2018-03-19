@@ -24,7 +24,6 @@ class _ArticleTitle extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <h1 style={articleTitleStyle}
                 id={this.props.id}
@@ -45,8 +44,8 @@ const articleContentStyle = {
     fontSize: '0.8em',
 };
 
-const ArticleContent = ({children}) =>
-    <div style={articleContentStyle}>{children}</div>;
+const ArticleContent = ({children, ...props}) =>
+    <div style={{...articleContentStyle, ...props.style}}>{children}</div>;
 
 export {
     Article,
