@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import Collapsible from 'react-collapsible';
 import PropTypes from 'prop-types';
@@ -77,7 +77,7 @@ const sidebarLinkStyle = {
 };
 
 const SidebarLink = ({to, onClick, children}) =>
-    <Link to={to} onClick={onClick} style={sidebarLinkStyle}>{children}</Link>;
+    <Link to={to} onClick={onClick} style={sidebarLinkStyle} className="SidebarLink" activeStyle={{backgroundColor: '#eee'}}>{children}</Link>;
 
 SidebarLink.propTypes = {
     to: PropTypes.string.isRequired,
