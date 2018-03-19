@@ -6,7 +6,7 @@
 * 15px: burger height
 */
 .bm-burger-button {
-    position: absolute;
+    position: fixed;
     width: 20px;
     height: 15px;
     left: 10px;
