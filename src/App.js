@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Navbar } from './components/navbar/Navbar';
 import { Sidebar, SidebarBody, SidebarHeader, SidebarLink, SidebarSection } from './components/sidebar/Sidebar';
 import Routes from './Routes';
+import Icon from "./components/icon/Icon";
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +19,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Navbar title="React-UI"/>
+                <Navbar title="React-UI">
+                    <a href="//github.com/etienne-bondot/react-ui" target="_blank" rel="noopener noreferrer">
+                        <Icon icon={["fab", "github"]} size="2x"/>
+                    </a>
+                </Navbar>
                 <Sidebar customCrossIcon={false} isOpen={this.state.sidebarIsOpen}>
                     <SidebarHeader title="React-UI"/>
                     <SidebarBody>
