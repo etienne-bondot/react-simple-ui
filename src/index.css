@@ -22,5 +22,15 @@ li {
 }
 
 a {
+    color: #000;
     text-decoration: none;
 }
+
+/**
+ * COLORS
+ */
+
+.Red {
+    color: red;
+}
+
