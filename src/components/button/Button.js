@@ -1,33 +1,50 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { COLORS } from '../../constants';
+import _ from 'lodash';
 
+import { COLORS } from '../../constants';
+import './Button.css';
 // TODO:
 // - raised style
 
-const defaultStyle = {
-    height: 36,
-    fontSize: '1em',
-    padding: '0 16px',
-    textTransform: 'uppercase',
-    borderRadius: 4,
-    fontFamily: 'Roboto, sans-serif',
-    border: 0,
-    minWidth: 120,
-    cursor: 'pointer',
-    outline: 'none',
-};
-
-const onFocusStyle = {
-    backgroundColor: COLORS.BUTTON.FOCUSED,
-};
-
-const onPressedStyle = {
-    backgroundColor: COLORS.BUTTON.PRESSED,
-};
-
-const disabledStyle = {
-    color: COLORS.BUTTON.DISABLED,
+const styles = {
+    default: {
+        height: 36,
+        fontSize: '1em',
+        padding: '0 16px',
+        textTransform: 'uppercase',
+        borderRadius: 4,
+        fontFamily: 'Roboto, sans-serif',
+        border: 0,
+        minWidth: 120,
+        cursor: 'pointer',
+        outline: 'none',
+        transition: 'all 150ms linear',
+    },
+    flat: {
+        default: {},
+        onFocus: {
+            backgroundColor: COLORS.BUTTON.FOCUSED,
+        },
+        onPressed: {
+            backgroundColor: COLORS.BUTTON.PRESSED,
+        },
+        disabled: {
+            color: COLORS.BUTTON.DISABLED,
+        },
+    },
+    raised: {
+        default: {
+            boxShadow: 'rgba(0, 0, 0, 0.2) -2px 2px 0px -2px, rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -2px'
+        },
+        onFocus: {
+            boxShadow: 'rgba(0, 0, 0, 0.2) -2px 2px 0px -2px, rgba(0, 0, 0, 0.2) 0px 4px 4px 0px, rgba(0, 0, 0, 0.2) 0px 4px 4px -2px'
+        },
+        onPressed: {},
+        disabled: {
+            backgroundColor: COLORS.BUTTON.DISABLED,
+        },
+    },
 };
 
 class Button extends Component {
@@ -47,12 +64,14 @@ class Button extends Component {
     }
 
     render() {
-        let style;
+        let style = _.assign({}, styles.default, this.props.style ? this.props.style : {});
+
         if (this.props.disabled) {
-            style = Object.assign({}, defaultStyle, disabledStyle);
+            style = _.assign({}, style, this.props.raised ? styles.raised.disabled : styles.flat.disabled);
         } else {
-            style = Object.assign({}, defaultStyle, this.state.isFocused ? onFocusStyle : {});
-            style = Object.assign({}, style, this.state.isPressed ? onPressedStyle : {});
+            style = _.assign({}, style, this.props.raised ? styles.raised.default : styles.flat.default);
+            style = _.assign({}, style, this.state.isFocused ? this.props.raised ? styles.raised.onFocus : styles.flat.onFocus : {});
+            style = _.assign({}, style, this.state.isPressed ? this.props.raised ? styles.raised.onPressed : styles.flat.onPressed : {});
         }
 
         return (
@@ -60,11 +79,12 @@ class Button extends Component {
                 type={this.props.type}
                 onClick={this.props.onClick}
                 style={style}
-                onMouseEnter={() => this.handleFocus(true)}
-                onMouseLeave={() => this.handleFocus(false)}
+                onMouseOver={() => this.handleFocus(true)}
+                onMouseOut={() => this.handleFocus(false)}
                 onMouseDown={() => this.handlePress(true)}
                 onMouseUp={() => this.handlePress(false)}
                 disabled={this.props.disabled}
+                className="Button"
             >
                 {this.props.children}
             </button>
@@ -76,6 +96,12 @@ Button.propTypes = {
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     raised: PropTypes.bool,
+    style: PropTypes.object,
+};
+
+Button.defaultProps = {
+    disabled: false,
+    raised: false,
 };
 
 export default Button;
