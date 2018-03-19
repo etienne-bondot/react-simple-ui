@@ -11,7 +11,7 @@ const Icon = ({icon, ...props}) =>
     <FontAwesomeIcon icon={icon} {...props}/>;
 
 Icon.propTypes = {
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]).isRequired,
     className: PropTypes.string,
     color: PropTypes.string,
     size: PropTypes.string,
@@ -31,7 +31,7 @@ Icon.propTypes = {
         'both'
     ]),
     rotation: PropTypes.number,
-    transform: PropTypes.oneOf([
+    transform: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object
     ]),
