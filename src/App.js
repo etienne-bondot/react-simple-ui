@@ -28,8 +28,9 @@ class App extends Component {
                     <SidebarHeader title="React-UI"/>
                     <SidebarBody>
                         <SidebarSection title="Components">
-                            <SidebarLink to="/guideline/buttons" onClick={this.closeSidebar}>Button</SidebarLink>
-                            <SidebarLink to="/guideline/icons" onClick={this.closeSidebar}>Icons</SidebarLink>
+                            <SidebarLink to="/guideline/button" onClick={this.closeSidebar}>Button</SidebarLink>
+                            <SidebarLink to="/guideline/icon" onClick={this.closeSidebar}>Icon</SidebarLink>
+                            <SidebarLink to="/guideline/input" onClick={this.closeSidebar}>Input</SidebarLink>
                         </SidebarSection>
                         <SidebarSection title="test">
                         </SidebarSection>
