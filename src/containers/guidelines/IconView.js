@@ -1,21 +1,29 @@
 import React from 'react';
 
-import Content from '../Content';
-import { Section, SectionTitle } from '../../components/section/Section';
-import { Article, ArticleContent, ArticleTitle } from '../../components/article/Article';
+import View from './View';
 import Icon from '../../components/icon/Icon';
 
-const IconView = () =>
-    <Content>
-        <Section>
-            <SectionTitle>Icons</SectionTitle>
-            <Article>
-                <ArticleTitle>Icons types</ArticleTitle>
-                <ArticleContent>
-                    <Icon icon="coffee"/>
-                </ArticleContent>
-            </Article>
-        </Section>
-    </Content>;
+const IconView = ({...props}) => {
+    const _iconView = {
+        title: 'Icon',
+        sections: [{
+            title: 'Icon types',
+            children: <Icon icon="coffee"/>
+        },],
+        properties: [{
+            name: 'icon',
+            type: 'string | string[]',
+            desc: 'The icon name'
+        },]
+    };
+
+    return (
+        <View
+            title={_iconView.title}
+            sections={_iconView.sections}
+            properties={_iconView.properties} {...props}
+        />
+    );
+};
 
 export default IconView;
