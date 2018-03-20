@@ -26,6 +26,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    text-align: justify;
+    line-height: 2em;
+}
+
 /**
  * COLORS
  */
