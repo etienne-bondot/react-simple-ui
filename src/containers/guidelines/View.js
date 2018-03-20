@@ -7,7 +7,7 @@ import { Section, SectionTitle } from '../../components/section/Section';
 import { Article, ArticleContent, ArticleTitle } from '../../components/article/Article';
 import Table from '../../components/table/Table';
 
-const View = ({title, sections, properties, ...props}) =>
+const View = ({title, sections, properties, references, ...props}) =>
     <Content>
         <Section>
             <SectionTitle>{title}</SectionTitle>
@@ -63,6 +63,13 @@ const View = ({title, sections, properties, ...props}) =>
                         </tbody>
                     </Table>
                 </ArticleContent>
+                {
+                    references &&
+                    <Fragment>
+                        <ArticleTitle id="references">References</ArticleTitle>
+                        <ArticleContent>{references.children}</ArticleContent>
+                    </Fragment>
+                }
             </Article>
         </Section>
     </Content>;
@@ -79,6 +86,9 @@ View.propTypes = {
         type: PropTypes.string.isRequired,
         desc: PropTypes.string.isRequired,
     })),
+    references: PropTypes.shape({
+        children: PropTypes.element.isRequired,
+    }),
 };
 
 export default View;
