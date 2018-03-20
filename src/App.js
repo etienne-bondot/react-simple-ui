@@ -32,8 +32,6 @@ class App extends Component {
                             <SidebarLink to="/guideline/icon" onClick={this.closeSidebar}>Icon</SidebarLink>
                             <SidebarLink to="/guideline/input" onClick={this.closeSidebar}>Input</SidebarLink>
                         </SidebarSection>
-                        <SidebarSection title="test">
-                        </SidebarSection>
                     </SidebarBody>
                 </Sidebar>
                 <Routes/>
