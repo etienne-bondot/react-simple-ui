@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import View from './View';
+import View from '../View';
 import Button from '../../components/button/Button';
 
 const ButtonView = ({...props}) => {

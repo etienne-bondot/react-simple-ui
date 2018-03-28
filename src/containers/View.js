@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import Content from '../Content';
-import { Section, SectionTitle } from '../../components/section/Section';
-import { Article, ArticleContent, ArticleTitle } from '../../components/article/Article';
-import Table from '../../components/table/Table';
+import Content from './Content';
+import { Section, SectionTitle } from '../components/section/Section';
+import { Article, ArticleContent, ArticleTitle } from '../components/article/Article';
+import Table from '../components/table/Table';
 
 const View = ({title, sections, properties, references, ...props}) =>
     <Content>
@@ -23,7 +23,7 @@ const View = ({title, sections, properties, references, ...props}) =>
                             <li key={i}><Link to={`${props.location.pathname}#${s.title.split(' ').join('-').toLowerCase()}`}>{s.title}</Link></li>
                         )
                     }
-                    <li><Link to={`${props.location.pathname}#properties`}>Properties</Link></li>
+                    {properties && <li><Link to={`${props.location.pathname}#properties`}>Properties</Link></li>}
                 </ArticleContent>
                 {
                     sections.map((s, i) =>
@@ -40,29 +40,34 @@ const View = ({title, sections, properties, references, ...props}) =>
                         </Fragment>
                     )
                 }
-                <ArticleTitle id="properties">Properties</ArticleTitle>
-                <ArticleContent>
-                    <Table>
-                        <thead>
-                        <tr>
-                            <th>Property</th>
-                            <th>Type</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {
-                            properties.map((property, i) =>
-                                <tr key={i}>
-                                    <td>{property.name}</td>
-                                    <td><span className="Red">{property.type}</span></td>
-                                    <td>{property.desc}</td>
+                {
+                    properties &&
+                    <Fragment>
+                        <ArticleTitle id="properties">Properties</ArticleTitle>
+                        <ArticleContent>
+                            <Table>
+                                <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
                                 </tr>
-                            )
-                        }
-                        </tbody>
-                    </Table>
-                </ArticleContent>
+                                </thead>
+                                <tbody>
+                                {
+                                    properties.map((property, i) =>
+                                        <tr key={i}>
+                                            <td>{property.name}</td>
+                                            <td><span className="Red">{property.type}</span></td>
+                                            <td>{property.desc}</td>
+                                        </tr>
+                                    )
+                                }
+                                </tbody>
+                            </Table>
+                        </ArticleContent>
+                    </Fragment>
+                }
                 {
                     references &&
                     <Fragment>
