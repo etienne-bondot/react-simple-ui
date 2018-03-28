@@ -1,8 +1,8 @@
 import React  from 'react';
 
-import View from './View';
+import View from '../View';
 import Input from '../../components/input/Input';
-import Button from "../../components/button/Button";
+import Button from '../../components/button/Button';
 
 const InputView = ({...props}) => {
     const _inputView = {

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import View from './View';
+import View from '../View';
 import Icon from '../../components/icon/Icon';
 
 const preStyle = {
