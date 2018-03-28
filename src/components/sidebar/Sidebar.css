@@ -32,6 +32,7 @@
 /* General sidebar styles */
 .bm-menu {
     background: #fff;
+    margin-top: -64px;
 }
 
 /* Morph shape necessary with bubble or elastic */
