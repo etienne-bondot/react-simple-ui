@@ -12,4 +12,4 @@ COPY package.json yarn.lock /usr/src/app/
 RUN yarn install --pure-lockfile
 
 # start app
-CMD ["yarn", "start"]
+CMD ["yarn", "build"]
