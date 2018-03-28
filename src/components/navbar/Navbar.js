@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { COLORS, STYLES } from '../../constants';
 
@@ -24,7 +25,7 @@ const headerTitle = {
 
 const Navbar = ({title = '', children}) =>
     <header style={headerStyle}>
-        <h1 style={headerTitle}>{title}</h1>
+        <h1 style={headerTitle}><Link to="/">{title}</Link></h1>
         {children}
     </header>;
 
