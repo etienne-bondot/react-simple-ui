@@ -38,7 +38,7 @@ const SidebarBody = ({children}) =>
     <nav style={sidebarBodyStyle}>{children}</nav>;
 
 const sidebarSectionTitleStyle = {
-    color: COLORS.ARTICLE.TITLE,
+    color: COLORS.TITLE,
     fontWeight: 700,
     marginTop: 0,
     padding: '15px 0 15px 22px',
