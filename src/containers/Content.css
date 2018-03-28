@@ -1,12 +1,3 @@
-.ContentWrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.Content {
-    margin: auto;
-}
-
 @media screen and (max-width: 1241px) {
     .Content {
         width: 760px;
