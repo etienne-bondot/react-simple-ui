@@ -4,8 +4,6 @@ import _ from 'lodash';
 
 import { COLORS } from '../../constants';
 import './Button.css';
-// TODO:
-// - raised style
 
 const styles = {
     default: {
@@ -24,13 +22,13 @@ const styles = {
     flat: {
         default: {},
         onFocus: {
-            backgroundColor: COLORS.BUTTON.FOCUSED,
+            backgroundColor: COLORS.FOCUSED,
         },
         onPressed: {
-            backgroundColor: COLORS.BUTTON.PRESSED,
+            backgroundColor: COLORS.PRESSED,
         },
         disabled: {
-            color: COLORS.BUTTON.DISABLED,
+            color: COLORS.DISABLED,
         },
     },
     raised: {
@@ -42,7 +40,7 @@ const styles = {
         },
         onPressed: {},
         disabled: {
-            backgroundColor: COLORS.BUTTON.DISABLED,
+            backgroundColor: COLORS.DISABLED,
         },
     },
 };
