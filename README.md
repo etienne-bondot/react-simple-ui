@@ -1,4 +1,4 @@
-# React-UI
+# react-simple-ui
 
 The main goal is to provide a minimal amount of pre-build components using common dependencies.
 
