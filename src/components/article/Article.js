@@ -9,7 +9,7 @@ const Article = ({children}) =>
 const articleTitleStyle = {
     display: 'flex',
     alignItems: 'center',
-    color: COLORS.ARTICLE.TITLE,
+    color: COLORS.TITLE,
     fontSize: '1.25em',
     fontWeight: 400,
     lineHeight: '32px',
