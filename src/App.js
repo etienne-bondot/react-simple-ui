@@ -27,13 +27,13 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Navbar title="React-UI">
-                    <a href="//github.com/etienne-bondot/react-ui" target="_blank" rel="noopener noreferrer">
+                <Navbar title="react-simple-ui">
+                    <a href="//github.com/etienne-bondot/react-simple-ui" target="_blank" rel="noopener noreferrer">
                         <Icon icon={["fab", "github"]} size="2x"/>
                     </a>
                 </Navbar>
                 <Sidebar customCrossIcon={false} isOpen={this.state.sidebarIsOpen}>
-                    <SidebarHeader title="React-UI"/>
+                    <SidebarHeader title="react-simple-ui"/>
                     <SidebarBody>
                         <SidebarSection title="Components">
                             <SidebarLink to="/guideline/button" onClick={this.closeSidebar}>Button</SidebarLink>
