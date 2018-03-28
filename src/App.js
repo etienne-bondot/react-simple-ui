@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 import { Navbar } from './components/navbar/Navbar';
 import { Sidebar, SidebarBody, SidebarHeader, SidebarLink, SidebarSection } from './components/sidebar/Sidebar';
@@ -10,6 +11,13 @@ class App extends Component {
         super(props);
         this.state = {sidebarIsOpen: false};
         this.closeSidebar = this.closeSidebar.bind(this);
+    }
+
+    componentWillMount() {
+        /**
+         * Google Analytics initialization
+         */
+        ReactGA.initialize('UA-116564057-1');
     }
 
     closeSidebar() {
