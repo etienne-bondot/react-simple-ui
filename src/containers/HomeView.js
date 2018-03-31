@@ -13,9 +13,9 @@ const HomeView = ({...props}) => {
             title: 'Components',
             children: (
                 <ul>
-                    <li><Link to="/guidelines/button">Button</Link></li>
-                    <li><Link to="/guidelines/icon">Icon</Link></li>
-                    <li><Link to="/guidelines/input">Input</Link></li>
+                    <li><Link to="/guideline/button">Button</Link></li>
+                    <li><Link to="/guideline/icon">Icon</Link></li>
+                    <li><Link to="/guideline/input">Input</Link></li>
                 </ul>
             )
         }, {
