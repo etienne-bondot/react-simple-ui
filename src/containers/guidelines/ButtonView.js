@@ -42,7 +42,11 @@ const ButtonView = ({...props}) => {
         }, {
             name: 'disabled',
             type: 'bool | false',
-            desc: 'Disable the button if true'
+            desc: 'Disable the button'
+        }, {
+            name: 'ripple',
+            type: 'bool | true',
+            desc: 'Add a ripple animation on click'
         }, {
             name: 'raised',
             type: 'bool | false',
