@@ -21,6 +21,7 @@ const ButtonView = ({...props}) => {
             children: (
                 <Fragment>
                     <Button style={{marginRight: '1em'}}>Button</Button>
+                    <Button ripple={false} style={{marginRight: '1em'}}>Button</Button>
                     <Button disabled style={{marginRight: '1em'}}>Button</Button>
                 </Fragment>
             )
@@ -29,6 +30,7 @@ const ButtonView = ({...props}) => {
             children: (
                 <Fragment>
                     <Button raised style={{marginRight: '1em'}}>Button</Button>
+                    <Button raised ripple={false} style={{marginRight: '1em'}}>Button</Button>
                     <Button raised disabled style={{marginRight: '1em'}}>Button</Button>
                 </Fragment>
             )

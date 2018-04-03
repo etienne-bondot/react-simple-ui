@@ -38,7 +38,9 @@ const styles = {
         onFocus: {
             boxShadow: 'rgba(0, 0, 0, 0.2) -2px 2px 0px -2px, rgba(0, 0, 0, 0.2) 0px 4px 4px 0px, rgba(0, 0, 0, 0.2) 0px 4px 4px -2px'
         },
-        onPressed: {},
+        onPressed: {
+            boxShadow: 'none'
+        },
         disabled: {
             backgroundColor: COLORS.DISABLED,
         },
@@ -48,9 +50,13 @@ const styles = {
 class Button extends Component {
     constructor(props) {
         super(props);
-        this.state = {isFocused: false, isPressed: false};
+        this.state = {isFocused: false, isPressed: false, rippleVisibility: 'hidden'};
         this.handleFocus = this.handleFocus.bind(this);
         this.handlePress = this.handlePress.bind(this);
+    }
+
+    componentDidMount() {
+        setTimeout(() => this.setState({rippleVisibility: 'visible'}), 1000);
     }
 
     handleFocus(isFocused) {
@@ -84,6 +90,7 @@ class Button extends Component {
                 disabled={this.props.disabled}
                 className="Button"
             >
+                {this.props.ripple ? <div className="Ripple" style={{visibility: this.state.rippleVisibility}}/> : null}
                 {this.props.children}
             </button>
         );
@@ -95,11 +102,13 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     raised: PropTypes.bool,
     style: PropTypes.object,
+    ripple: PropTypes.bool
 };
 
 Button.defaultProps = {
     disabled: false,
     raised: false,
+    ripple: true,
 };
 
 export default Button;
