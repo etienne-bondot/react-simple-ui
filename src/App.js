@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
+import { ToastContainer } from 'react-toastify';
 
 import { Navbar } from './components/navbar/Navbar';
 import { Sidebar, SidebarBody, SidebarHeader, SidebarLink, SidebarSection } from './components/sidebar/Sidebar';
@@ -39,10 +40,12 @@ class App extends Component {
                             <SidebarLink to="/guideline/button" onClick={this.closeSidebar}>Button</SidebarLink>
                             <SidebarLink to="/guideline/icon" onClick={this.closeSidebar}>Icon</SidebarLink>
                             <SidebarLink to="/guideline/input" onClick={this.closeSidebar}>Input</SidebarLink>
+                            <SidebarLink to="/guideline/toast" onClick={this.closeSidebar}>Toast</SidebarLink>
                         </SidebarSection>
                     </SidebarBody>
                 </Sidebar>
                 <Routes/>
+                <ToastContainer/>
             </div>
         );
     }
