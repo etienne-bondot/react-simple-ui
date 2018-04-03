@@ -12,4 +12,4 @@ export const STYLES = {
         HEIGHT: 64,
         BACKGROUND_COLOR: COLORS.WHITE,
     }
-}
+};
