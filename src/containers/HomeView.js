@@ -16,6 +16,7 @@ const HomeView = ({...props}) => {
                     <li><Link to="/guideline/button">Button</Link></li>
                     <li><Link to="/guideline/icon">Icon</Link></li>
                     <li><Link to="/guideline/input">Input</Link></li>
+                    <li><Link to="/guideline/toast">Toast</Link></li>
                 </ul>
             )
         }, {
@@ -26,6 +27,7 @@ const HomeView = ({...props}) => {
                     <li><a href="https://github.com/FortAwesome/react-fontawesome" target="_blank" rel="noopener noreferrer">react-fontawesome</a></li>
                     <li><a href="https://github.com/negomi/react-burger-menu" target="_blank" rel="noopener noreferrer">react-burger-menu</a></li>
                     <li><a href="https://github.com/glennflanagan/react-collapsible" target="_blank" rel="noopener noreferrer">react-collapsible</a></li>
+                    <li><a href="https://github.com/fkhadra/react-toastify" target="_blank" rel="noopener noreferrer">react-toastify</a></li>
                 </ul>
             )
         }],
