@@ -1,7 +1,8 @@
 import React from 'react';
 
 const sectionStyle = {
-    paddingTop: 80,
+    paddingTop: 40,
+    paddingBottom: 40,
 };
 
 const Section = ({children}) =>

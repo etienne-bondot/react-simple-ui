@@ -11,7 +11,6 @@ const contentWrapperStyle = {
 
 const contentStyle = {
     margin: 'auto',
-    paddingBottom: 80,
 };
 
 const Content = ({children}) =>
