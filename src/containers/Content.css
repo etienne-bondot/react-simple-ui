@@ -1,6 +1,7 @@
 @media screen and (max-width: 1241px) {
     .Content {
-        width: 760px;
+        /*width: 760px;*/
+        width: 80%;
     }
 }
 
