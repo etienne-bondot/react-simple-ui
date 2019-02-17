@@ -1,12 +1,13 @@
 .Button {
     position: relative;
     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000;
 }
 
-.Button:after {
+.Ripple {
     content: '';
-    display: block;
-    position: absolute;
+    position:absolute;
     left: 50%;
     top: 50%;
     width: 120px;
@@ -14,33 +15,26 @@
     margin-left: -60px;
     margin-top: -60px;
     background: rgba(80, 80, 80, 0.6);
-    border-radius: 100%;
-    opacity: .6;
     transform: scale(0);
+    opacity:.6;
+    border-radius:100%;
+}
+
+.Button:not(:active):not(:disabled) .Ripple {
+    animation: ripple 1s;
 }
 
 @keyframes ripple {
     0% {
+        opacity: 0;
         transform: scale(0);
     }
     20% {
+        opacity: 1;
         transform: scale(1);
     }
     100% {
         opacity: 0;
         transform: scale(2);
     }
-}
-
-.Button:not(:active):after {
-    animation: ripple 1s ease-out;
-}
-
-/* fixes initial animation run, without user input, on page load.*/
-.Button:after {
-    visibility: hidden;
-}
-
-.Button:focus:after {
-    visibility: visible;
 }

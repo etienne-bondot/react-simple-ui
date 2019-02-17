@@ -1,44 +1,102 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import View from './View';
+import View from "./View";
 
-const HomeView = ({...props}) => {
-    const _homeView = {
-        title: 'react-simple-ui',
-        sections: [{
-            title: 'Goals',
-            desc: 'The main goal is to provide a minimal amount of pre-build components using common dependencies.',
-        }, {
-            title: 'Components',
-            children: (
-                <ul>
-                    <li><Link to="/guidelines/button">Button</Link></li>
-                    <li><Link to="/guidelines/icon">Icon</Link></li>
-                    <li><Link to="/guidelines/input">Input</Link></li>
-                </ul>
-            )
-        }, {
-            title: 'Dependencies',
-            children: (
-                <ul>
-                    <li><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a></li>
-                    <li><a href="https://github.com/FortAwesome/react-fontawesome" target="_blank" rel="noopener noreferrer">react-fontawesome</a></li>
-                    <li><a href="https://github.com/negomi/react-burger-menu" target="_blank" rel="noopener noreferrer">react-burger-menu</a></li>
-                    <li><a href="https://github.com/glennflanagan/react-collapsible" target="_blank" rel="noopener noreferrer">react-collapsible</a></li>
-                </ul>
-            )
-        }],
-    };
+const HomeView = ({ ...props }) => {
+  const _homeView = {
+    title: "react-simple-ui",
+    sections: [
+      {
+        title: "Goals",
+        desc:
+          "The main goal is to provide a minimal amount of pre-build components using common dependencies."
+      },
+      {
+        title: "Components",
+        children: (
+          <ul>
+            <li>
+              <Link to="/guideline/button">Button</Link>
+            </li>
+            <li>
+              <Link to="/guideline/dialog">Dialog</Link>
+            </li>
+            <li>
+              <Link to="/guideline/icon">Icon</Link>
+            </li>
+            <li>
+              <Link to="/guideline/input">Input</Link>
+            </li>
+            <li>
+              <Link to="/guideline/toast">Toast</Link>
+            </li>
+          </ul>
+        )
+      },
+      {
+        title: "Dependencies",
+        children: (
+          <ul>
+            <li>
+              <a
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                React
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/FortAwesome/react-fontawesome"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                react-fontawesome
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/negomi/react-burger-menu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                react-burger-menu
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/glennflanagan/react-collapsible"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                react-collapsible
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/fkhadra/react-toastify"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                react-toastify
+              </a>
+            </li>
+          </ul>
+        )
+      }
+    ]
+  };
 
-    return (
-        <View
-            title={_homeView.title}
-            sections={_homeView.sections}
-            properties={_homeView.properties}
-            {...props}
-        />
-    );
+  return (
+    <View
+      title={_homeView.title}
+      sections={_homeView.sections}
+      properties={_homeView.properties}
+      {...props}
+    />
+  );
 };
 
 export default HomeView;
@@ -53,8 +111,10 @@ export default HomeView;
 //
 // ### Components
 // - [Button](https://react-simple-ui.herokuapp.com/guideline/button)
+// - [Dialog](https://react-simple-ui.herokuapp.com/guideline/dialog)
 // - [Icon](https://react-simple-ui.herokuapp.com/guideline/icon)
 // - [Input](https://react-simple-ui.herokuapp.com/guideline/input)
+// - [Toast](https://react-simple-ui.herokuapp.com/guideline/toast)
 //
 // ### Dependencies
 // - [react](https://reactjs.org/)

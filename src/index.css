@@ -31,6 +31,11 @@ p {
     line-height: 2em;
 }
 
+.Code {
+    background-color: #e9e9e9;
+    padding: 0 5px;
+}
+
 /**
  * COLORS
  */
