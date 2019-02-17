@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactGA from "react-ga";
 import { ToastContainer } from "react-toastify";
 
+import Icon from "./components/icon/Icon";
 import { Navbar } from "./components/navbar/Navbar";
 import {
   Sidebar,
@@ -10,14 +11,34 @@ import {
   SidebarLink,
   SidebarSection
 } from "./components/sidebar/Sidebar";
-import Routes from "./Routes";
-import Icon from "./components/icon/Icon";
+
 import ButtonView from "./containers/guidelines/ButtonView";
+import DialogView from "./containers/guidelines/DialogView";
+import IconView from "./containers/guidelines/IconView";
+import InputView from "./containers/guidelines/InputView";
+import ToastView from "./containers/guidelines/ToastView";
+import Routes from "./Routes";
 
 const COMPONENTS = [
   {
-    name: "button",
+    name: "Button",
     component: ButtonView
+  },
+  {
+    name: "Dialog",
+    component: DialogView
+  },
+  {
+    name: "Icon",
+    component: IconView
+  },
+  {
+    name: "Input",
+    component: InputView
+  },
+  {
+    name: "Toast",
+    component: ToastView
   }
 ];
 
