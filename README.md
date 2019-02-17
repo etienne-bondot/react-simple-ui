@@ -10,6 +10,7 @@ Check the [guidelines](https://react-simple-ui.herokuapp.com) for more informati
 
 #### Components
 - [Button](https://react-simple-ui.herokuapp.com/guideline/button)
+- [Dialog](https://react-simple-ui.herokuapp.com/guideline/dialog)
 - [Icon](https://react-simple-ui.herokuapp.com/guideline/icon)
 - [Input](https://react-simple-ui.herokuapp.com/guideline/input)
 - [Toasts](https://react-simple-ui.herokuapp.com/guideline/Toast)

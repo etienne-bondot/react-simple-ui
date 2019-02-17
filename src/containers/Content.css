@@ -1,12 +1,12 @@
 @media screen and (max-width: 1241px) {
-    .Content {
-        /*width: 760px;*/
-        width: 80%;
-    }
+  .Content {
+    /*width: 760px;*/
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1241px) {
-    .Content {
-        width: 1160px;
-    }
+  .Content {
+    width: 1160px;
+  }
 }

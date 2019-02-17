@@ -6,46 +6,46 @@
 * 15px: burger height
 */
 .bm-burger-button {
-    position: fixed;
-    width: 20px;
-    height: 15px;
-    left: 10px;
-    top: calc((64px - 15px) / 2);
+  position: fixed;
+  width: 20px;
+  height: 15px;
+  left: 10px;
+  top: calc((64px - 15px) / 2);
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: #000;
+  background: #000;
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: #bdc3c7;
+  background: #bdc3c7;
 }
 
 /* General sidebar styles */
 .bm-menu {
-    background: #fff;
-    margin-top: -64px;
+  background: #fff;
+  margin-top: -64px;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-    fill: #373a47;
+  fill: #373a47;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-    color: #212121;
+  color: #212121;
 }
 
 /* Styling of overlay */
 .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
